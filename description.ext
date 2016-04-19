@@ -1,0 +1,2 @@
+#include "aegis_ace_settings.hpp"
+enableDebugConsole = 1;
