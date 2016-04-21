@@ -157,16 +157,41 @@ switch (_CampTyp) do
 		_campWall      = [];
 		_campObjInit   = [[],[],[],[],[],[],[]];
 	};
-	case 10:
+//-------------------------------------------------------------------------------------------------------------------------
+	case 10: // African Rebels
 	{
-		_campBasic     = ["NULL"];
-		_campAmmo      = [];
-		_campStatic    = [];
-		_campAddUnit   = [];
-		_campUserObj   = [];
+		_campBasic     = ["Land_PowerPoleWooden_small_F",
+										 ["Land_cargo_house_slum_F",-0.76,-4.9,0],
+										 ["Land_posed",-9.34,0.49,0],
+										 ["Logic",10,15,0],0];
+		_campAmmo      = [["plp_ct_WeathCrateBigBrown",10.04,-0.16,90]];
+		_campStatic    = [["I_Mortar_01_F",3.02,-2.43,0,"CAF_AG_AFR_P_AK47"],
+											["I_HMG_01_high_F",-3.5,0.42,270,"CAF_AG_AFR_P_AK47"],
+											["I_HMG_01_high_F",14.91,-6.79,90,"CAF_AG_AFR_P_AK47"]];
+		_campAddUnit   = ["CAF_AG_AFR_P_GL","CAF_AG_AFR_P_GL",
+											"CAF_AG_AFR_P_RPG",
+											"CAF_AG_AFR_P_PKM"];
+		_campUserObj   = [["Satelit",0.57,0,270],
+											["Satelit",-0.57,0,90],
+											["Land_Slum_House02_F",5.28,7.53,0],
+											["Land_Campfire_burning",6.33,-0.24,0],
+											["Land_Ind_TankSmall2",-0.81,-9.27,0],
+											["Land_Slum_House03_F", 12.75,-1.44,90],
+											["plp_cts_WoodBarrelDark",10.18,-1.76,0],
+											["Land_stand_waterl_EP1",8.72,3.31,0],
+											["Land_stand_meat_EP1",9.78,8.07,0]];
 		_campRandomObj = [];
 		_campWall      = [];
-		_campObjInit   = [[],[],[],[],[],[],[]];
+		_campObjInit   = [[],
+											["_x addWeaponCargoGlobal [""caf_AK47"", 5];
+											 _x addMagazineCargoGlobal [""CAF_30Rnd_762x39_AK"", 30];
+											 _x addItemCargoGlobal [""MiniGrenade"", 12];
+											 _x addItemCargoGlobal [""DemoCharge_Remote_Mag"", 8]"],
+											[],
+											[],
+											[],
+											[],
+											[]];
 	};
 //-------------------------------------------------------------------------------------------------------------------------
 	Default {

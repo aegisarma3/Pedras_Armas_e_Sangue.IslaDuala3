@@ -1,2 +1,18 @@
 #include "aegis_ace_settings.hpp"
 enableDebugConsole = 1;
+
+//SUSHI locking and breaching doors
+#define SAF_DEF
+	#include "scripts\sushi\core\init.cpp"
+	#include "scripts\sushi\breach\init.cpp"
+#undef SAF_DEF
+
+class CfgFunctions
+{
+	class SAF {
+		#define SAF_FNCS
+			#include "scripts\sushi\core\init.cpp"
+			#include "scripts\sushi\breach\init.cpp"
+		#undef SAF_FNCS
+	};
+};
